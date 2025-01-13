@@ -4,8 +4,10 @@ import { DraftPatient, Patient } from "../types"
 
 type PatientState = {
     patients: Patient[]
+    activeID: Patient["id"]
     addPatient: (data: DraftPatient) => void
     deletePatient: (id: Patient["id"]) => void
+    getPatientById: (id: Patient["id"]) => void
 }
 
 const createPatient = (patient: DraftPatient) : Patient => {
@@ -14,6 +16,7 @@ const createPatient = (patient: DraftPatient) : Patient => {
 
 export const usePatientStore = create<PatientState>((set) => ({
     patients: [],
+    activeID: "",
     addPatient: (data) => {
         const newPatient = createPatient(data)
         set((state) => ({ // SET ES COMO EL RETURN, pero es el que se utiliza con zustand, setear informacion
@@ -24,5 +27,8 @@ patients: [...state.patients, newPatient]
         set((state) => ({
             patients: state.patients.filter(patient => patient.id !== id)
         }))
+    },
+    getPatientById: (id) => {
+        console.log(id)
     }
 }))
