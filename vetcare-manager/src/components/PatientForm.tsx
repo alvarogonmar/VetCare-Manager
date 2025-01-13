@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 
 export default function PatientForm() {
+  const { register } = useForm();
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
       <h2 className="font-black text-3xl text-center">Patient Tracking</h2>
@@ -23,6 +24,9 @@ export default function PatientForm() {
             className="w-full p-3 border border-gray-100"
             type="text"
             placeholder="Patient's Name"
+            {...register("name", {
+              required: "Patient name is required",
+            })}
           />
         </div>
 
