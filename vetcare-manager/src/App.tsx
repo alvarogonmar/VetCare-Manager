@@ -1,3 +1,6 @@
+import PatientForm from "./components/PatientForm";
+import PatientsList from "./components/PatientsList";
+
 function App() {
   return (
     <>
@@ -7,7 +10,10 @@ function App() {
           <span className="text-indigo-700">Manager</span>
         </h1>
 
-        <div className="mt-12 md:flex"></div>
+        <div className="mt-12 md:flex">
+          <PatientForm />
+          <PatientsList />
+        </div>
       </div>
     </>
   );
