@@ -1,3 +1,10 @@
 import { create } from "zustand"
+import { Patient } from "../types"
 
-export const usePatientStore = create(() => ({}))
+type PatientState = {
+    patients: Patient[]
+}
+
+export const usePatientStore = create<PatientState>(() => ({
+    patients: []
+}))
