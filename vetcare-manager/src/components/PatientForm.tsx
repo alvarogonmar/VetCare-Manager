@@ -66,7 +66,15 @@ export default function PatientForm() {
             className="w-full p-3 border border-gray-100"
             type="email"
             placeholder="Registration Email"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Invalid Email",
+              },
+            })}
           />
+          {errors.email && <Error> {errors.email?.message?.toString()}</Error>}
         </div>
 
         <div className="mb-5">
