@@ -6,3 +6,5 @@ export type Patient = {
     date: Date
     symptoms: string
 }
+
+export type DraftPatient = Omit<Patient, "id">
