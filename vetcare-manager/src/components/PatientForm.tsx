@@ -39,7 +39,7 @@ export default function PatientForm() {
               required: "Patient name is required",
             })}
           />
-          {errors.name && <Error> {errors.name?.message?.toString()}</Error>}
+          {errors.name && <Error> {errors.name?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -55,9 +55,7 @@ export default function PatientForm() {
               required: "Caretaker name is required",
             })}
           />
-          {errors.caretaker && (
-            <Error> {errors.caretaker?.message?.toString()}</Error>
-          )}
+          {errors.caretaker && <Error> {errors.caretaker?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -77,7 +75,7 @@ export default function PatientForm() {
               },
             })}
           />
-          {errors.email && <Error> {errors.email?.message?.toString()}</Error>}
+          {errors.email && <Error> {errors.email?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -92,7 +90,7 @@ export default function PatientForm() {
               required: "Date is required",
             })}
           />
-          {errors.date && <Error> {errors.date?.message?.toString()}</Error>}
+          {errors.date && <Error> {errors.date?.message}</Error>}
         </div>
 
         <div className="mb-5">
@@ -107,9 +105,7 @@ export default function PatientForm() {
               required: "Symptoms are required",
             })}
           ></textarea>
-          {errors.symptoms && (
-            <Error> {errors.symptoms?.message?.toString()}</Error>
-          )}
+          {errors.symptoms && <Error> {errors.symptoms?.message}</Error>}
         </div>
 
         <input
