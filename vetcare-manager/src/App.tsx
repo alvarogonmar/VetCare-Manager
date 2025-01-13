@@ -6,6 +6,8 @@ function App() {
           VetCare {""}
           <span className="text-indigo-700">Manager</span>
         </h1>
+
+        <div className="mt-12 md:flex"></div>
       </div>
     </>
   );
