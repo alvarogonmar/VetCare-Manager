@@ -48,7 +48,13 @@ export default function PatientForm() {
             className="w-full p-3 border border-gray-100"
             type="text"
             placeholder="Caretaker's Name"
+            {...register("caretaker", {
+              required: "Caretaker name is required",
+            })}
           />
+          {errors.caretaker && (
+            <Error> {errors.caretaker?.message?.toString()}</Error>
+          )}
         </div>
 
         <div className="mb-5">
