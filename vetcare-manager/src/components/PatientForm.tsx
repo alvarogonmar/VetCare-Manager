@@ -85,7 +85,11 @@ export default function PatientForm() {
             id="date"
             className="w-full p-3 border border-gray-100"
             type="date"
+            {...register("date", {
+              required: "Date is required",
+            })}
           />
+          {errors.date && <Error> {errors.date?.message?.toString()}</Error>}
         </div>
 
         <div className="mb-5">
