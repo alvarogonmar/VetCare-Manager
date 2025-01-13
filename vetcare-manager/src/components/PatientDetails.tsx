@@ -5,5 +5,5 @@ type PatientDetailsProps = {
 };
 
 export default function PatientDetails({ patient }: PatientDetailsProps) {
-  return <div>PatientDetails</div>;
+  return <div>{patient.name}</div>;
 }
