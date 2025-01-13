@@ -8,7 +8,9 @@ export default function PatientForm() {
     formState: { errors },
   } = useForm();
 
-  const registerPatient = () => {};
+  const registerPatient = (data) => {
+    console.log(data);
+  };
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
       <h2 className="font-black text-3xl text-center">Patient Tracking</h2>
