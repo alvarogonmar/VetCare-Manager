@@ -34,6 +34,11 @@ export const usePatientStore = create<PatientState>()(devtools((set) => ({
             set(() => ({
                 activeID: id
             }))
+        },
+        updatePatient: (data) => {
+            set((state) => ({
+                patients: state.patients.map(patient => patient.id === state.activeID ? {id: state.activeID, ...data} : patient)
+            }))
         }
     })
 ))
