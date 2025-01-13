@@ -1,3 +1,5 @@
+import { useForm } from "react-hook-form";
+
 export default function PatientForm() {
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
