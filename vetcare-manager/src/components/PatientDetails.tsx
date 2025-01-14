@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { Patient } from "../types";
 import PatientDetailsItem from "./PatientDetailsItem";
 import { usePatientStore } from "../store/store";
@@ -11,6 +12,9 @@ export default function PatientDetails({ patient }: PatientDetailsProps) {
   const getPatientById = usePatientStore((state) => state.getPatientById);
   const handleClick = () => {
     deletePatient(patient.id);
+    toast("Patient Successfully Removed", {
+      type: "error",
+    });
   };
   return (
     <div className="mx-5 my-10 px-5 py-10 bg-white shadow-md rounded-xl">
