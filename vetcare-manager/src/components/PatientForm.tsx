@@ -33,7 +33,7 @@ export default function PatientForm() {
       updatePatient(data);
     } else {
       addPatient(data);
-      toast("Patient registered correctly");
+      toast.success("Patient Registered Correctly");
     }
 
     reset();
